@@ -1,4 +1,4 @@
-# Investment Banking Valuation Toolkit
+<img width="101" height="16" alt="image" src="https://github.com/user-attachments/assets/b30cd631-da67-4cee-a4de-07d511c01aec" /># Investment Banking Valuation Toolkit
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -57,6 +57,38 @@ Discounted Cash Flow (DCF) |	107.41 |	129.26 |	118.34
 Precedent Transactions |	58.08 |	176.97 |	117.53
 Leveraged Buyout (LBO) |	43.03 |	64.55 |	53.79
 
-Current share price: $281.16
+**Current share price: $281.16**
+**Median of all valuation midpoints: $118.34 (approx)**
 
-Median of all valuation midpoints: $118.34 (approx)
+The current market price is significantly above all valuation ranges, suggesting the stock is overvalued relative to the fundamental analysis.
+
+## Football Field Chart
+<img width="1783" height="1184" alt="football_field" src="https://github.com/user-attachments/assets/a62f7a46-4159-4e5c-9ab4-66191dbd5206" />
+The chart shows each valuation method as a horizontal bar. The red dashed line is the current price ($281.16); the green dashed line is the median of all midpoints ($118.34).
+
+
+## DCF Sensitivity Heatmap
+
+The DCF model’s output per share varies with the WACC (discount rate) and terminal growth rate.
+<img width="1500" height="900" alt="dcf_sensitivity_heatmap" src="https://github.com/user-attachments/assets/7f4dc639-3948-487c-b8d2-89daaaed491d" />
+
+Interpretation: Lower WACC and higher terminal growth produce higher valuations.
+
+## LBO Sensitivity Heatmap
+<img width="1500" height="900" alt="lbo_sensitivity_heatmap" src="https://github.com/user-attachments/assets/995af4a4-3669-4965-8293-f803e99d8e2a" />
+
+The LBO model’s entry price depends on the purchase multiple (entry EV/EBITDA) and exit multiple (exit EV/EBITDA).
+
+For GE, the LBO‑implied price ranges from ~$43 to $65 per share, well below the current market price.
+
+Trading Comps Percentile Valuations
+
+The toolkit also computes implied share prices using the 25th, 50th, and 75th percentiles of peer multiples:
+
+| Multiple |	25th Percentile ($) |	50th Percentile ($) |	75th Percentile ($)|
+|----------|----------------------|---------------------|--------------------|
+|EV/Revenue |	200.4 |	231.84 |	264.46 |
+|EV/EBITDA |	283.84 |	290.06 |	317.22 |
+|P/E	| 283.84 |	314.73 |	415.85 |
+
+These are exported to the Excel report.
